@@ -130,15 +130,36 @@ const filters = [
 export default function HomePage() {
   const [current, setCurrent] = useState(0);
   const [active, setActive] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const [filter, setFilter] = useState("All");
   const filtered = filter === "All" ? PROJECTS.slice(1, 10) : PROJECTS.filter(p => p.type === filter).slice(1, 10);
 
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrent((prev) => (prev + 1) % images.length);
+  //   }, 3000);
+  //   return () => clearInterval(interval);
+  // }, []);
+    useEffect(() => {
+    setMounted(true);
+    setWindowWidth(window.innerWidth);
+    
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 3000);
-    return () => clearInterval(interval);
+    
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
 
@@ -195,6 +216,11 @@ export default function HomePage() {
 
     return () => observer.disconnect();
   }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
 
   return (
     <>
@@ -438,127 +464,6 @@ export default function HomePage() {
         </div>
       </div>
 
-
-      {/* <section className="section">
-        <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1.3fr",
-              gap: 72,
-              alignItems: "center"
-            }}
-          >
-            <div
-              style={{
-                borderRadius: 12,
-                height: 380,
-                position: "relative",
-                overflow: "hidden",
-                border: `1px solid ${C.border}`
-              }}
-            >
-              <img
-                src="/assets/integrity.jpg"
-                alt="Integrity"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block"
-                }}
-              />
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: 20,
-                  left: 20,
-                  background: C.blue,
-                  color: "#fff",
-                  borderRadius: 8,
-                  padding: "14px 20px"
-                }}
-              >
-                <div style={{ fontSize: 32, fontWeight: 700 }}>16+</div>
-                <div style={{ fontSize: 11, opacity: 0.85 }}>
-                  Years of Excellence
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="section-label">Who We Are</div>
-
-              <h2 className="section-title">
-                Built on Integrity.
-                <br />
-                <span className="blue">Driven by Excellence.</span>
-              </h2>
-
-              <p className="para" style={{ marginBottom: 14 }}>
-                Infinity Art PMC Engineering Services Pvt. Ltd. Co. is a premier
-                project management consultancy delivering reliable PMC services
-                across residential, commercial, institutional, and township sectors.
-              </p>
-
-              <p className="para" style={{ marginBottom: 28 }}>
-                Led by a seasoned team with 30+ years of construction experience,
-                our approach is rooted in accountability, transparency, and measurable
-                results.
-              </p>
-
-
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: 14,
-                  marginBottom: 28
-                }}
-              >
-                {[
-                  [
-                    "🎯",
-                    "Our Vision",
-                    "To be the most trusted PMC partner delivering consistent value and excellence."
-                  ],
-                  [
-                    "🤝",
-                    "Our Mission",
-                    "Committed to core accountability grounded in integrity and ethical practices."
-                  ]
-                ].map(([ic, t, d]) => (
-                  <div key={t} className="card">
-                    <div style={{ fontSize: 20, marginBottom: 8 }}>{ic}</div>
-                    <div
-                      style={{
-                        fontSize: 13,
-                        fontWeight: 700,
-                        marginBottom: 6
-                      }}
-                    >
-                      {t}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: 12,
-                        color: C.muted,
-                        lineHeight: 1.6
-                      }}
-                    >
-                      {d}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <Link href="/about" className="btn-primary">
-                More About Us →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <div
         style={{
           position: "relative",
@@ -686,29 +591,7 @@ export default function HomePage() {
       </div>
 
       {/* ── SERVICES ── */}
-      {/* <section className="section-alt">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: 52 }}>
-            <div className="section-label">What We Offer</div>
-            <h2 className="section-title">Our Core <span className="blue">Services</span></h2>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
-            {SERVICES.map((s) => (
-              <Link key={s.slug} href="/services" style={{ textDecoration: "none" }}>
-                <div className="card" style={{ cursor: "pointer", height: "100%" }}>
-                  <div style={{ width: 48, height: 48, borderRadius: 10, background: C.bluePale, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, marginBottom: 14 }}>{s.icon}</div>
-                  <h3 style={{ fontSize: 15, fontWeight: 700, marginBottom: 8 }}>{s.title}</h3>
-                  <p style={{ fontSize: 13, color: C.muted, lineHeight: 1.7, marginBottom: 14 }}>{s.short}</p>
-                  <span style={{ color: C.blue, fontSize: 12, fontWeight: 600 }}>Learn More →</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div style={{ textAlign: "center", marginTop: 40 }}>
-            <Link href="/services" className="btn-primary">View All Services →</Link>
-          </div>
-        </div>
-      </section> */}
+      
       <div
         style={{
           maxWidth: "1200px",
@@ -912,73 +795,7 @@ export default function HomePage() {
       </div>
 
       {/* ── PROJECTS ── */}
-      {/* <section className="section">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <div className="section-label">Our Portfolio</div>
-            <h2 className="section-title">Projects That <span className="blue">Define Us</span></h2>
-          </div>
-          <div style={{ display: "flex", gap: 10, marginBottom: 28, flexWrap: "wrap" }}>
-            {["All", "Residential", "Commercial", "Institutional", "Township"].map(f => (
-              <button key={f} onClick={() => setFilter(f)} style={{ background: filter === f ? C.blue : "#fff", border: `1.5px solid ${filter === f ? C.blue : C.border}`, color: filter === f ? "#fff" : C.muted, fontSize: 12, fontWeight: filter === f ? 600 : 500, padding: "7px 18px", borderRadius: 20, cursor: "pointer" }}>{f}</button>
-            ))}
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
-            {filtered.map(p => (
-              <Link key={p.image} href="/projects" style={{ textDecoration: "none" }}>
-                <div style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 10px rgba(30,77,140,0.05)", cursor: "pointer" }}>
-                  <div style={{ height: 160, position: "relative" }}>
-                    <Image
-                      src={p.image}
-                      alt={p.name}
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
 
-                    <div style={{
-                      position: "absolute",
-                      top: 10,
-                      left: 10,
-                      background: C.blue,
-                      color: "#fff",
-                      fontSize: 9,
-                      fontWeight: 700,
-                      padding: "3px 9px",
-                      borderRadius: 20
-                    }}>
-                      {p.type}
-                    </div>
-
-                    <div style={{
-                      position: "absolute",
-                      top: 10,
-                      right: 10,
-                      background: p.status === "Completed" ? "#e6f4ea" : "#fff8e1",
-                      color: p.status === "Completed" ? "#2e7d32" : "#e65100",
-                      fontSize: 9,
-                      fontWeight: 700,
-                      padding: "3px 9px",
-                      borderRadius: 20
-                    }}>
-                      {p.status === "Completed" ? "✓ Completed" : "⏳ Ongoing"}
-                    </div>
-                  </div>
-                  <div style={{ padding: "16px 18px" }}>
-                    <div style={{ fontSize: 14, fontWeight: 700, marginBottom: 8 }}>{p.name}</div>
-                    <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: C.muted }}>
-                      <span>📍 {p.location}</span>
-                      <span style={{ color: C.blue, fontWeight: 600 }}>📐 {p.area}</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div style={{ textAlign: "center", marginTop: 36 }}>
-            <Link href="/projects" className="btn-primary">View All Projects →</Link>
-          </div>
-        </div>
-      </section> */}
       <section
         style={{
           position: "relative",
@@ -1153,16 +970,16 @@ export default function HomePage() {
                     cursor: 'pointer',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#1E40AF'}  
-                  onMouseLeave={e => e.currentTarget.style.color = '#2563EB'}  
+                  onMouseEnter={e => e.currentTarget.style.color = '#1E40AF'}
+                  onMouseLeave={e => e.currentTarget.style.color = '#2563EB'}
                 >
-                  Read more 
+                  Read more
                 </a>
               </div>
-               
+
             </div>
           </div>
-         
+
         </div>
       </section>
 
@@ -1237,7 +1054,8 @@ export default function HomePage() {
                 data-index={index}
                 style={{
                   display: "flex",
-                  flexDirection: window.innerWidth >= 1024 ? "row" : "column",
+                  // flexDirection: window.innerWidth >= 1024 ? "row" : "column",
+                  flexDirection: windowWidth >= 1024 ? "row" : "column",
                   overflow: "hidden",
                   borderRadius: "1rem",
                   backgroundColor: "black",
@@ -1250,7 +1068,9 @@ export default function HomePage() {
                 {/* Image */}
                 <div
                   style={{
-                    width: window.innerWidth >= 1024 ? "45%" : "100%",
+                    // width: window.innerWidth >= 1024 ? "45%" : "100%",
+                    width: windowWidth >= 1024 ? "45%" : "100%",
+                    // height: window.innerWidth >= 1024 ? "auto" : window.innerWidth >= 640 ? "18rem" : "16rem",
                     height: window.innerWidth >= 1024 ? "auto" : window.innerWidth >= 640 ? "18rem" : "16rem",
                     position: "relative",
                   }}
@@ -1294,8 +1114,10 @@ export default function HomePage() {
                 {/* Content */}
                 <div
                   style={{
-                    width: window.innerWidth >= 1024 ? "55%" : "100%",
-                    padding: window.innerWidth >= 1024 ? "40px" : "24px",
+                    // width: window.innerWidth >= 1024 ? "55%" : "100%",
+                    // padding: window.innerWidth >= 1024 ? "40px" : "24px",
+                    width: windowWidth >= 1024 ? "55%" : "100%",
+                    padding: windowWidth >= 1024 ? "40px" : "24px",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
@@ -1326,49 +1148,34 @@ export default function HomePage() {
             ))}
           </div>
           <button
-  type="button"
-  className="btn btn-light"
-  style={{
-    cursor: 'pointer',
-    marginTop: '30px',         
-    display: 'block', 
-    borderRadius: '7px',          
-    marginLeft: 'auto',         
-    marginRight: 'auto',        
-    padding: '12px 24px',        
-    fontSize: '16px' 
-  }}
-  onClick={() => {
-    window.location.href = '/projects';
-  }}
->
-  View All Project
-</button>
+            type="button"
+            className="btn btn-light"
+            style={{
+              cursor: 'pointer',
+              marginTop: '30px',
+              display: 'block',
+              borderRadius: '7px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              padding: '12px 24px',
+              fontSize: '16px'
+            }}
+            onClick={() => {
+              window.location.href = '/projects';
+            }}
+          >
+            View All Project
+          </button>
         </div>
       </section>
 
       {/* ── CASE STUDY TEASER ── */}
-      <CaseStudies/>
-      
+      <CaseStudies />
+
       <Feedback />
       <Start />
 
-      {/* ── TESTIMONIALS ── */}
-     
 
-      {/* ── CTA BANNER ── */}
-      {/* <section style={{ background: C.blue, padding: "72px 32px", textAlign: "center" }}>
-        <div className="container">
-          <h2 style={{ fontSize: "clamp(24px,3vw,38px)", fontWeight: 700, color: "#fff", marginBottom: 14 }}>Ready to Start Your Project?</h2>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", maxWidth: 520, margin: "0 auto 32px", lineHeight: 1.7 }}>
-            Let our expert team guide your project from concept to commissioning. Get in touch today.
-          </p>
-          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact" style={{ background: "#fff", color: C.blue, textDecoration: "none", fontSize: 13, fontWeight: 700, padding: "13px 28px", borderRadius: 8 }}>Get In Touch →</Link>
-            <Link href="/projects" style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.4)", textDecoration: "none", fontSize: 13, fontWeight: 600, padding: "11px 24px", borderRadius: 8 }}>View Our Work</Link>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 }

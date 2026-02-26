@@ -1,4 +1,6 @@
 
+"use client";
+
 import React from 'react';
 import "../styles/start.modal.css"
 import Link from 'next/link';

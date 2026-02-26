@@ -1,18 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static HTML export
+  reactStrictMode: true,
+  swcMinify: true,
+
+  // Output for static export
   output: "export",
 
-  // Optional: customize base path if deploying to a subfolder
-  // basePath: '/my-app',
-
-  // Optional: enable React strict mode
-  reactStrictMode: true,
-
-  // Optional: enable image optimization for static export
+  // Needed for static export of images
   images: {
     unoptimized: true,
   },
+
+  // Optional: Netlify prefers trailing slashes
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

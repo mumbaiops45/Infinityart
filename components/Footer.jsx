@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { NAV_LINKS, SERVICES, C } from "../lib/data";
 
