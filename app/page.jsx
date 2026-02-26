@@ -136,27 +136,20 @@ export default function HomePage() {
   const [filter, setFilter] = useState("All");
   const filtered = filter === "All" ? PROJECTS.slice(1, 10) : PROJECTS.filter(p => p.type === filter).slice(1, 10);
 
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrent((prev) => (prev + 1) % images.length);
-  //   }, 3000);
-  //   return () => clearInterval(interval);
-  // }, []);
-    useEffect(() => {
+  useEffect(() => {
     setMounted(true);
     setWindowWidth(window.innerWidth);
-    
+
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 3000);
-    
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    
+
     window.addEventListener('resize', handleResize);
-    
+
     return () => {
       clearInterval(interval);
       window.removeEventListener('resize', handleResize);
@@ -366,7 +359,7 @@ export default function HomePage() {
                 boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
                 marginTop: "78px",
                 width: "380px",
-                height: "300px",
+                height: "340px",
                 display: "flex",
                 flexDirection: "column",
                 fontFamily: "sans-serif",
@@ -429,14 +422,15 @@ export default function HomePage() {
               {/* Bottom Stats */}
               <div>
                 <hr style={{ border: "1px solid #ddd", marginBottom: "8px" }} />
+                
                 <div
                   style={{
+                    marginTop: "15px",
                     display: "flex",
-                    justifyContent: "space-between",
                     fontSize: "12px",
                     textAlign: "center",
-                    gap: "4px",
                     color: "#333",
+                     alignItems: "flex-start",
                   }}
                 >
                   {[
@@ -444,13 +438,20 @@ export default function HomePage() {
                     ["10M+", "Sqft Managed"],
                     ["200+", "Projects Delivered"],
                     ["180+", "Satisfied Clients"],
-                    [
-                      "20+",
-                      "Years of International Exposure in Dubai & Qatar.",
-                    ],
+                    ["20+", "Years of International Exposure in Dubai & Qatar."],
                   ].map((stat, i) => (
-                    <div key={i}>
-                      <p style={{ fontWeight: "bold", fontSize: "14px" }}>
+                    <div
+                      key={i}
+                      style={{
+                        flex: 1,                
+                        display: "flex",        
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        padding: "0 8px",      
+                      }}
+                    >
+                      <p style={{ fontWeight: "bold", fontSize: "14px", margin: 0 }}>
                         {stat[0]}
                       </p>
                       <span style={{ fontSize: "11px", color: "#777" }}>
@@ -557,7 +558,7 @@ export default function HomePage() {
             </div>
 
             <div style={{ fontSize: "18px" }}>
-              Our team brings over 30 years of construction and project management
+              Our team brings over 20+ years of construction and project management
               experience. We focus on accountability, transparency, and measurable
               results to give our clients peace of mind.
             </div>
@@ -592,7 +593,7 @@ export default function HomePage() {
       </div>
 
       {/* ── SERVICES ── */}
-      
+
       <div
         style={{
           maxWidth: "1200px",
@@ -683,7 +684,7 @@ export default function HomePage() {
                 marginBottom: "24px",
               }}
             >
-              Led by a seasoned team with 30+ years of construction experience, our
+              Led by a seasoned team with 20+ years of construction experience, our
               approach is rooted in accountability, transparency, and measurable
               results.
             </p>
@@ -984,8 +985,8 @@ export default function HomePage() {
       </section>
 
       {/* Proftfolio Section */}
-      <Portfolio/>
-     
+      <Portfolio />
+
 
       {/* ── CASE STUDY TEASER ── */}
       <CaseStudies />

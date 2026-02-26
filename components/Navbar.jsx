@@ -25,7 +25,7 @@ export default function Navbar() {
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 200, background: navBg, borderBottom: navBorder, boxShadow: navShadow, transition: "all 0.3s" }}>
         
         <div style={{ height: 3, background: `linear-gradient(90deg,${C.blue},${C.steel},${C.steelLight})` }} />
-        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 32px", display: "flex", alignItems: "center", height: 66, gap: 8 }}>
+        <div style={{ background: "white", margin: "0 auto", padding: "0 32px", display: "flex", alignItems: "center", height: 66, gap: 8 }}>
           {/* Logo */}
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", marginRight: "auto" }}>
             <div style={{ width: 40, height: 40, borderRadius: 8, background: `linear-gradient(135deg,${C.blue},${C.steel})`, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, fontWeight: 700, flexShrink: 0 }}>∞</div>
