@@ -6,6 +6,7 @@ import Link from "next/link";
 import { C, CLIENTS, TESTIMONIALS, STATS } from "../../lib/data";
 import Feedback from "../../components/Feedback";
 
+
 export const metadata = { title: "Clients | Infinity Art PMC" };
 
 export default function ClientsPage() {
@@ -56,6 +57,7 @@ export default function ClientsPage() {
       </section>
       
       <Feedback/>
+     
 
       {/* Testimonials */}
       {/* <section className="section-alt">

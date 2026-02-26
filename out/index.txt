@@ -1,0 +1,95 @@
+2:I[6513,[],"ClientPageRoot"]
+3:I[911,["699","static/chunks/8e1d74a4-fd9754ec9f620b2d.js","231","static/chunks/231-21f3ce3072bf73ff.js","59","static/chunks/59-48c24c67113d6f3c.js","987","static/chunks/987-743289e934e0c580.js","772","static/chunks/772-3b0d7fa258db2bb4.js","931","static/chunks/app/page-f2d4be3fe623f3e1.js"],"default"]
+5:I[4242,["231","static/chunks/231-21f3ce3072bf73ff.js","185","static/chunks/app/layout-605a6cebe8504b95.js"],"default"]
+6:I[9275,[],""]
+7:I[1343,[],""]
+8:I[1514,["231","static/chunks/231-21f3ce3072bf73ff.js","185","static/chunks/app/layout-605a6cebe8504b95.js"],"default"]
+9:I[738,["231","static/chunks/231-21f3ce3072bf73ff.js","185","static/chunks/app/layout-605a6cebe8504b95.js"],"WhatsAppButton"]
+a:I[738,["231","static/chunks/231-21f3ce3072bf73ff.js","185","static/chunks/app/layout-605a6cebe8504b95.js"],"EnquiryTrigger"]
+4:Td97,
+          * { margin: 0; padding: 0; box-sizing: border-box; }
+          body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #1a2e44; }
+          a { color: inherit; }
+          button { font-family: inherit; }
+          @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          .fade-up { animation: fadeUp 0.6s ease forwards; }
+          .fade-in { animation: fadeIn 0.5s ease forwards; }
+
+          /* Page hero shared styles */
+          .page-hero {
+            padding: 140px 32px 80px;
+            background: linear-gradient(150deg, #fff 0%, #e8f0fb 55%, #d6e6f8 100%);
+            position: relative;
+            overflow: hidden;
+          }
+          .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e4d8c, #4a7ab5, #6a9fd8);
+          }
+          .page-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.035;
+            background-image: radial-gradient(circle, #1e4d8c 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+          }
+          .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+          .section { padding: 88px 32px; }
+          .section-alt { padding: 88px 32px; background: #f0f5fb; }
+          .section-label {
+            display: inline-block;
+            background: #e8f0fb; color: #1e4d8c;
+            font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+            text-transform: uppercase; padding: 5px 14px; border-radius: 20px;
+            margin-bottom: 12px;
+          }
+          .section-title {
+            font-size: clamp(26px, 3.5vw, 40px);
+            font-weight: 700; letter-spacing: -0.02em;
+            line-height: 1.2; margin-bottom: 14px;
+          }
+          .section-title .blue { color: #1e4d8c; }
+          .para { font-size: 15px; color: #5a7590; line-height: 1.75; }
+          .btn-primary {
+            background: #1e4d8c; border: none; color: #fff;
+            font-size: 13px; font-weight: 600; padding: 12px 26px;
+            border-radius: 8px; cursor: pointer; font-family: inherit;
+            text-decoration: none; display: inline-block;
+            transition: background 0.2s;
+          }
+          .btn-primary:hover { background: #163d70; }
+          .btn-outline {
+            background: transparent; border: 2px solid #1e4d8c; color: #1e4d8c;
+            font-size: 13px; font-weight: 600; padding: 10px 22px;
+            border-radius: 8px; cursor: pointer; font-family: inherit;
+            text-decoration: none; display: inline-block;
+          }
+          .card {
+            background: #fff; border: 1px solid #dce8f5;
+            border-radius: 10px; padding: 28px;
+            box-shadow: 0 2px 12px rgba(30,77,140,0.06);
+          }
+
+          @media (max-width: 900px) {
+            .section, .section-alt { padding: 64px 24px; }
+            .page-hero { padding: 120px 24px 60px; }
+            .container { padding: 0 24px; }
+          }
+          @media (max-width: 600px) {
+            .section, .section-alt { padding: 48px 20px; }
+          }
+        0:["ZUSur9k_qoah-ACjZMz7U",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"props":{"params":{},"searchParams":{}},"Component":"$3"}]],null],null]},[["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"UTF-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","style",null,{"children":"$4"}]]}],["$","body",null,{"children":[["$","$L5",null,{}],["$","main",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/16d8989dbd7275f3.css","precedence":"next","crossOrigin":"$undefined"}]]}]}],["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}]]}]]}],null],null],[null,"$Lb"]]]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Infinity Art PMC Engineering Services"}],["$","meta","3",{"name":"description","content":"Professional Project Management Consultancy for India's Construction Industry"}]]
+1:null
