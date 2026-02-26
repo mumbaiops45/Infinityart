@@ -645,7 +645,6 @@ export default function HomePage() {
                 fontWeight: "bold",
                 padding: "8px 16px",
                 borderRadius: "12px",
-                boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
                 fontSize: "14px",
               }}
             >
@@ -770,7 +769,7 @@ export default function HomePage() {
             {/* Button */}
             <button
               style={{
-                backgroundColor: "#2563EB",
+                backgroundColor: "#1E4D8C",
                 color: "white",
                 fontWeight: "600",
                 padding: "12px 24px",
@@ -780,10 +779,10 @@ export default function HomePage() {
                 transition: "all 0.3s ease",
               }}
               onMouseOver={(e) => {
-                e.currentTarget.style.backgroundColor = "#1D4ED8";
+                e.currentTarget.style.backgroundColor = "#1E4D8C";
               }}
               onMouseOut={(e) => {
-                e.currentTarget.style.backgroundColor = "#2563EB";
+                e.currentTarget.style.backgroundColor = "#1E4D8C";
               }}
               onClick={() => {
                 window.location.href = "/about";
