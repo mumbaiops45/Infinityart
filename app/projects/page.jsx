@@ -26,7 +26,7 @@ export default function ProjectsPage() {
             Over 80 projects delivered across residential, commercial, institutional, and township sectors — each one a testament to our commitment to quality.
           </p>
           <div style={{ display: "flex", gap: 32, marginTop: 36, flexWrap: "wrap" }}>
-            {[["80+", "Projects Delivered"], ["5M+", "Sqft Managed"], ["96%", "On-Time Rate"], ["₹2000Cr+", "Value Managed"]].map(([v, l]) => (
+            {[["160+", "Projects Delivered"], ["10M+", "Sqft Managed"], ["96%", "On-Time Rate"], ["₹2000Cr+", "Value Managed"]].map(([v, l]) => (
               <div key={l}>
                 <div style={{ fontSize: 28, fontWeight: 700, color: C.blue }}>{v}</div>
                 <div style={{ fontSize: 12, color: C.muted, marginTop: 2 }}>{l}</div>

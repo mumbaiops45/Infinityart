@@ -12,6 +12,23 @@ export default function ContactPage() {
 
   return (
     <>
+
+    { /*make the responsive  */}
+    <style jsx>{`
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+`}</style>
       <div className="page-hero">
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className="section-label">Contact Us</div>
@@ -26,8 +43,10 @@ export default function ContactPage() {
 
       <section className="section">
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.6fr", gap: 72, alignItems: "start" }}>
-            {/* Left info */}
+          {/* <div style={{ display: "grid", gridTemplateColumns: "1fr 1.6fr", gap: 72, alignItems: "start"  
+          }}> */}
+         <div className="contact-grid" >
+           
             <div>
               <div className="section-label">Reach Us</div>
               <h2 className="section-title" style={{ fontSize: 28 }}>Contact <span className="blue">Details</span></h2>
@@ -48,7 +67,7 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Quick links */}
+             
               <div style={{ marginTop: 40, padding: "24px", background: C.bluePale, border: `1px solid ${C.gray200}`, borderRadius: 10 }}>
                 <div style={{ fontSize: 13, fontWeight: 700, color: C.blue, marginBottom: 14 }}>Quick Response Guarantee</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -59,7 +78,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact form */}
+           
             <div style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 14, boxShadow: "0 4px 24px rgba(30,77,140,0.10)", overflow: "hidden" }}>
               <div style={{ background: C.blue, padding: "20px 32px" }}>
                 <div style={{ fontSize: 16, fontWeight: 700, color: "#fff" }}>Send Us a Message</div>
@@ -136,7 +155,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map placeholder */}
+      
       <section className="section-alt">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: 32 }}>
@@ -154,3 +173,287 @@ export default function ContactPage() {
     </>
   );
 }
+
+
+// "use client";
+// import { useState } from "react";
+// import { C } from "../../lib/data";
+
+// export default function ContactPage() {
+//   const [sent, setSent] = useState(false);
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setSent(true);
+//   };
+
+//   return (
+//     <>
+//       <div className="page-hero">
+//         <div className="container hero-inner">
+//           <div className="section-label">Contact Us</div>
+//           <h1 className="section-title">
+//             Let's Build <span className="blue">Together</span>
+//           </h1>
+//           <p className="para">
+//             Ready to discuss your project? Our team of experienced PMC
+//             professionals is here to consult, plan, and deliver excellence from
+//             day one.
+//           </p>
+//         </div>
+//       </div>
+
+//       <section className="section">
+//         <div className="container grid-2">
+          
+         
+//           <div>
+//             <div className="section-label">Reach Us</div>
+//             <h2 className="section-title small">
+//               Contact <span className="blue">Details</span>
+//             </h2>
+
+//             <div className="info-list">
+//               {[
+//                 ["📍", "Address", "Infinity Art PMC Engineering Services\nBengaluru, Karnataka, India – 560 001"],
+//                 ["📞", "Phone", "+91 98XXX XXXXX\n+91 80XXXX XXXX"],
+//                 ["✉️", "Email", "info@infinityartpmc.in\nprojects@infinityartpmc.in"],
+//                 ["🕐", "Office Hours", "Monday – Saturday\n9:00 AM – 6:00 PM IST"],
+//               ].map(([ic, label, val]) => (
+//                 <div key={label} className="info-item">
+//                   <div className="info-icon">{ic}</div>
+//                   <div>
+//                     <div className="info-label">{label}</div>
+//                     <div className="info-value">{val}</div>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+
+//             <div className="quick-box">
+//               <div className="quick-title">Quick Response Guarantee</div>
+//               <div className="quick-list">
+//                 <div>✓ Reply within 4 business hours</div>
+//                 <div>✓ Free initial consultation</div>
+//                 <div>✓ No obligation assessment</div>
+//               </div>
+//             </div>
+//           </div>
+
+         
+//           <div className="form-card">
+//             <div className="form-header">
+//               <div>Send Us a Message</div>
+//               <span>We'll get back to you within 4 business hours</span>
+//             </div>
+
+//             {sent ? (
+//               <div className="success-box">
+//                 <div className="success-icon">✅</div>
+//                 <h3>Message Sent!</h3>
+//                 <p>
+//                   Thank you for reaching out. Our team will review your enquiry
+//                   and contact you within 4 business hours.
+//                 </p>
+//                 <button onClick={() => setSent(false)}>
+//                   Send Another Message
+//                 </button>
+//               </div>
+//             ) : (
+//               <form onSubmit={handleSubmit} className="form-body">
+
+//                 <div className="grid-2-sm">
+//                   <input required placeholder="Full Name *" />
+//                   <input placeholder="Company Name" />
+//                 </div>
+
+//                 <div className="grid-2-sm">
+//                   <input required type="email" placeholder="Email Address *" />
+//                   <input required placeholder="Phone Number *" />
+//                 </div>
+
+//                 <div className="grid-2-sm">
+//                   <select>
+//                     <option>Project Type</option>
+//                     <option>Residential</option>
+//                     <option>Commercial</option>
+//                     <option>Industrial</option>
+//                   </select>
+
+//                   <select>
+//                     <option>Project Value</option>
+//                     <option>Below ₹5 Cr</option>
+//                     <option>₹5 Cr – ₹25 Cr</option>
+//                     <option>₹25 Cr – ₹100 Cr</option>
+//                   </select>
+//                 </div>
+
+//                 <textarea
+//                   required
+//                   placeholder="Project Description *"
+//                 />
+
+//                 <button type="submit" className="submit-btn">
+//                   Submit Enquiry →
+//                 </button>
+//               </form>
+//             )}
+//           </div>
+//         </div>
+//       </section>
+
+     
+//       <style jsx>{`
+
+//         .container {
+//           width: 90%;
+//           max-width: 1200px;
+//           margin: auto;
+//         }
+
+//         .hero-inner {
+//           padding: 80px 0;
+//         }
+
+//         .section-title {
+//           font-size: clamp(28px, 4vw, 52px);
+//           max-width: 600px;
+//         }
+
+//         .section-title.small {
+//           font-size: 28px;
+//         }
+
+//         .grid-2 {
+//           display: grid;
+//           grid-template-columns: 1fr 1.6fr;
+//           gap: 60px;
+//           align-items: start;
+//         }
+
+//         .grid-2-sm {
+//           display: grid;
+//           grid-template-columns: 1fr 1fr;
+//           gap: 16px;
+//         }
+
+//         .info-list {
+//           margin-top: 30px;
+//           display: flex;
+//           flex-direction: column;
+//           gap: 20px;
+//         }
+
+//         .info-item {
+//           display: flex;
+//           gap: 16px;
+//         }
+
+//         .info-icon {
+//           width: 46px;
+//           height: 46px;
+//           background: ${C.bluePale};
+//           border-radius: 10px;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//         }
+
+//         .info-value {
+//           white-space: pre-line;
+//           font-size: 14px;
+//         }
+
+//         .quick-box {
+//           margin-top: 40px;
+//           padding: 20px;
+//           background: ${C.bluePale};
+//           border-radius: 10px;
+//         }
+
+//         .form-card {
+//           background: #fff;
+//           border-radius: 14px;
+//           overflow: hidden;
+//           box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+//         }
+
+//         .form-header {
+//           background: ${C.blue};
+//           color: white;
+//           padding: 20px;
+//           font-weight: 600;
+//         }
+
+//         .form-header span {
+//           font-size: 12px;
+//           display: block;
+//           opacity: 0.8;
+//         }
+
+//         .form-body {
+//           padding: 30px;
+//           display: flex;
+//           flex-direction: column;
+//           gap: 18px;
+//         }
+
+//         input, select, textarea {
+//           padding: 12px;
+//           border-radius: 8px;
+//           border: 1px solid ${C.border};
+//           width: 100%;
+//         }
+
+//         textarea {
+//           height: 120px;
+//           resize: vertical;
+//         }
+
+//         .submit-btn {
+//           background: ${C.blue};
+//           color: white;
+//           border: none;
+//           padding: 14px;
+//           border-radius: 8px;
+//           font-weight: 600;
+//           cursor: pointer;
+//         }
+
+//         .success-box {
+//           padding: 50px 30px;
+//           text-align: center;
+//         }
+
+//         .success-icon {
+//           font-size: 48px;
+//           margin-bottom: 15px;
+//         }
+
+//         /* ================= RESPONSIVE ================= */
+
+//         @media (max-width: 1024px) {
+//           .grid-2 {
+//             grid-template-columns: 1fr;
+//           }
+//         }
+
+//         @media (max-width: 768px) {
+//           .grid-2-sm {
+//             grid-template-columns: 1fr;
+//           }
+
+//           .hero-inner {
+//             padding: 50px 0;
+//           }
+
+//           .form-body {
+//             padding: 20px;
+//           }
+//         }
+
+//       `}</style>
+//     </>
+//   );
+// }
+

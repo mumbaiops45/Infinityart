@@ -1,5 +1,7 @@
+
 import Link from "next/link";
 import { C, CLIENTS, TESTIMONIALS, STATS } from "../../lib/data";
+import Feedback from "../../components/Feedback";
 
 export const metadata = { title: "Clients | Infinity Art PMC" };
 
@@ -21,7 +23,7 @@ export default function ClientsPage() {
       {/* Stats */}
       <section style={{ background: C.blue, padding: "56px 32px" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 32 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 32 }}>
             {STATS.map(s => (
               <div key={s.label} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: 40, fontWeight: 700, color: "#fff" }}>{s.value}</div>
@@ -49,9 +51,11 @@ export default function ClientsPage() {
           </div>
         </div>
       </section>
+      
+      <Feedback/>
 
       {/* Testimonials */}
-      <section className="section-alt">
+      {/* <section className="section-alt">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div className="section-label">What Clients Say</div>
@@ -73,7 +77,7 @@ export default function ClientsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why clients choose us */}
       <section className="section">

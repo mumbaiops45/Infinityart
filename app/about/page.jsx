@@ -87,7 +87,7 @@ export default function AboutPage() {
             textAlign: "center",
           }}
         >
-          <div style={{ fontSize: 26, fontWeight: 700, color: C.blue }}>16+</div>
+          <div style={{ fontSize: 26, fontWeight: 700, color: C.blue }}>20+</div>
           <div style={{ fontSize: 10, color: C.muted }}>Years of Experience</div>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function AboutPage() {
       {/* Stats */}
       <section style={{ background: C.blue, padding: "64px 32px" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 32 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 32 }}>
             {STATS.map(s => (
               <div key={s.label} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: 44, fontWeight: 700, color: "#fff" }}>{s.value}</div>
