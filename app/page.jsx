@@ -250,18 +250,19 @@ export default function HomePage() {
         ></div>
 
     
-        <div
-          style={{
-            position: "relative",
-            zIndex: 10,
-            maxWidth: "1280px",
-            width: "100%",
-            padding: "0 32px",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            color: "#fff",
-          }}
+        <div className="herostly"
+          // style={{
+          //   position: "relative",
+          //   zIndex: 10,
+          //   maxWidth: "1280px",
+          //   width: "100%",
+          //   // padding: "0 32px",
+          //   padding: '4rem 5rem',
+          //   display: "flex",
+          //   flexDirection: "row",
+          //   justifyContent: "space-between",
+          //   color: "#fff",
+          // }}
         >
          
           <div style={{
@@ -343,20 +344,7 @@ export default function HomePage() {
               justifyContent: "flex-end",
             }}
           >
-            <div className="performcard"
-              // style={{
-              //   backgroundColor: "#fff",
-              //   padding: "16px",
-              //   borderRadius: "12px",
-              //   boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
-              //   marginTop: "78px",
-              //   width: "380px",
-              //   height: "340px",
-              //   display: "flex",
-              //   flexDirection: "column",
-              //   fontFamily: "sans-serif",
-              // }}
-            >
+            <div className="performcard">
               <div >
                 <p
                   style={{
@@ -459,13 +447,14 @@ export default function HomePage() {
       </div>
       
 
-      <div
-        style={{
-          position: "relative",
-          background: "linear-gradient(to right, #f9fafb, #ffffff, #f9fafb)",
-          padding: "80px 32px",
-          overflow: "hidden",
-        }}
+      <div className="somechange"
+        // style={{
+        //   position: "relative",
+        //   background: "linear-gradient(to right, #f9fafb, #ffffff, #f9fafb)",
+        //   // padding: "80px 32px",
+        //   padding: '4rem 5rem',
+        //   overflow: "hidden",
+        // }}
       >
 
         <div
@@ -587,12 +576,12 @@ export default function HomePage() {
 
       {/* ── SERVICES ── */}
 
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "64px 16px",
-        }}
+      <div className="stylesome"
+        // style={{
+        //   maxWidth: "1200px",
+        //   margin: "0 auto",
+        //   padding: "4rem 5rem"
+        // }}
       >
         <div
           style={{
@@ -850,9 +839,9 @@ export default function HomePage() {
               style={{
                 textTransform: "uppercase",
                 letterSpacing: "3px",
-                fontSize: "0.875rem",
+                    fontSize: "1.5rem",
                 marginBottom: "24px",
-                fontWeight: "600",
+                fontWeight: "700",
                 color: "var(--primery)",
               }}
             >

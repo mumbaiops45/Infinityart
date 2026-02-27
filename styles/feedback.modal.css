@@ -2,7 +2,7 @@
 
 .feedback-section {
   background-color: #f3f4f6; /* gray-100 */
-  padding: 3rem 0;
+  padding: 3rem 5rem;
 }
 
 .feedback-section h2 {
@@ -81,5 +81,13 @@
 }
 
 .feedback-dot.active {
-  background-color: #2563eb; /* blue-600 */
+  background-color: #2563eb; 
+}
+
+
+@media (max-width: 480px) {
+
+  .feedback-section {
+    padding: 20px 3%;
+  }
 }
