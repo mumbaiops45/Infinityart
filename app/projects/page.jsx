@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { C, PROJECTS } from "../../lib/data";
+import "../../styles/project.modal.css"
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState("All");
@@ -56,7 +57,8 @@ export default function ProjectsPage() {
           </div>
 
           {/* Grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="projectstyle" >
+            {/* gridTemplateColumns: "repeat(3,1fr)" */}
             {filtered.map(p => (
               <div key={p.slug} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 10px rgba(30,77,140,0.05)" }}>
                 <div

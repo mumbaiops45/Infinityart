@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { C, STATS, TESTIMONIALS } from "../../lib/data";
+import "../../styles/aboutpage.modal.css"
 
 export const metadata = { title: "About Us | Infinity Art PMC" };
 
@@ -21,109 +22,110 @@ export default function AboutPage() {
         </div>
       </div>
       <section className="section">
-  <div className="container">
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1.2fr",
-        gap: 72,
-        alignItems: "center",
-      }}
-    >
-      
-      <div
-        style={{
-          borderRadius: 14,
-          overflow: "hidden", 
-          height: 420,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-          border: `1px solid ${C.border}`,
-        }}
-      >
-        <img
-          src="/assets/whowe.jpg"
-          alt="Integrity"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
+        <div className="container">
+          <div className="abutstly"
+            // style={{
+            //   display: "grid",
+            //   gridTemplateColumns: "1fr 1.2fr",
+            //   gap: 72,
+            //   alignItems: "center",
+            // }}
+          >
 
-       
-        <span
-          style={{
-            fontSize: 100,
-            opacity: 0.09,
-            position: "absolute",
-          }}
-        >
-          🏛
-        </span>
-        <div
-          style={{
-            position: "absolute",
-            bottom: 24,
-            left: 24,
-            background: C.blue,
-            color: "#fff",
-            borderRadius: 10,
-            padding: "18px 24px",
-          }}
-        >
-          <div style={{ fontSize: 38, fontWeight: 700 }}>2010</div>
-          <div style={{ fontSize: 12, opacity: 0.85 }}>Year Established</div>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            top: 24,
-            right: 24,
-            background: "#fff",
-            border: `1px solid ${C.border}`,
-            borderRadius: 10,
-            padding: "14px 18px",
-            textAlign: "center",
-          }}
-        >
-          <div style={{ fontSize: 26, fontWeight: 700, color: C.blue }}>20+</div>
-          <div style={{ fontSize: 10, color: C.muted }}>Years of Experience</div>
-        </div>
-      </div>
+            <div
+              style={{
+                borderRadius: 14,
+                overflow: "hidden",
+                height: 420,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                position: "relative",
+                border: `1px solid ${C.border}`,
+              }}
+            >
+              <img
+                src="/assets/whowe.jpg"
+                alt="Integrity"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
 
-     
-      <div>
-        <div className="section-label">Our Story</div>
-        <h2 className="section-title">Who We Are</h2>
-        <p className="para" style={{ marginBottom: 16 }}>
-          Infinity Art PMC Engineering Services Pvt. Ltd. Co. was founded with a singular vision: to bring genuine professionalism and accountability to India's construction project management space.
-        </p>
-        <p className="para" style={{ marginBottom: 16 }}>
-          Since inception, we have grown to manage over 5 million sq. ft. of development area across residential, commercial, institutional, and township projects for some of India's most respected developers.
-        </p>
-        <p className="para" style={{ marginBottom: 28 }}>
-          Our leadership team brings over three decades of combined experience across the full construction lifecycle — from feasibility and design management through to commissioning and handover. This depth of knowledge means we anticipate challenges before they arise and deliver solutions that protect our clients' interests at every stage.
-        </p>
-        <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-          <Link href="/contact" className="btn-primary">
-            Work With Us
-          </Link>
-          <Link href="/projects" className="btn-outline">
-            Our Projects
-          </Link>
+
+              <span
+                style={{
+                  fontSize: 100,
+                  opacity: 0.09,
+                  position: "absolute",
+                }}
+              >
+                🏛
+              </span>
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 24,
+                  left: 24,
+                  background: C.blue,
+                  color: "#fff",
+                  borderRadius: 10,
+                  padding: "18px 24px",
+                }}
+              >
+                <div style={{ fontSize: 38, fontWeight: 700 }}>2010</div>
+                <div style={{ fontSize: 12, opacity: 0.85 }}>Year Established</div>
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 24,
+                  right: 24,
+                  background: "#fff",
+                  border: `1px solid ${C.border}`,
+                  borderRadius: 10,
+                  padding: "14px 18px",
+                  textAlign: "center",
+                }}
+              >
+                <div style={{ fontSize: 26, fontWeight: 700, color: C.blue }}>20+</div>
+                <div style={{ fontSize: 10, color: C.muted }}>Years of Experience</div>
+              </div>
+            </div>
+
+
+            <div>
+              <div className="section-label">Our Story</div>
+              <h2 className="section-title">Who We Are</h2>
+              <p className="para" style={{ marginBottom: 16 }}>
+                Infinity Art PMC Engineering Services Pvt. Ltd. Co. was founded with a singular vision: to bring genuine professionalism and accountability to India's construction project management space.
+              </p>
+              <p className="para" style={{ marginBottom: 16 }}>
+                Since inception, we have grown to manage over 5 million sq. ft. of development area across residential, commercial, institutional, and township projects for some of India's most respected developers.
+              </p>
+              <p className="para" style={{ marginBottom: 28 }}>
+                Our leadership team brings over three decades of combined experience across the full construction lifecycle — from feasibility and design management through to commissioning and handover. This depth of knowledge means we anticipate challenges before they arise and deliver solutions that protect our clients' interests at every stage.
+              </p>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Link href="/contact" className="btn-primary">
+                  Work With Us
+                </Link>
+                <Link href="/projects" className="btn-outline">
+                  Our Projects
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Stats */}
       <section style={{ background: C.blue, padding: "64px 32px" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 32 }}>
+          <div className="aboutfeedback">
+            {/* style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 32 }} */}
             {STATS.map(s => (
               <div key={s.label} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: 44, fontWeight: 700, color: "#fff" }}>{s.value}</div>
@@ -141,7 +143,8 @@ export default function AboutPage() {
             <div className="section-label">Our Foundation</div>
             <h2 className="section-title">Vision & <span className="blue">Mission</span></h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+          <div className="gridstyl" >
+            {/* style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }} */}
             {[
               { icon: "🎯", title: "Our Vision", text: "To be the most trusted and respected project management consultancy in India — the partner every developer turns to when quality, reliability, and accountability are non-negotiable." },
               { icon: "🤝", title: "Our Mission", text: "To deliver measurable value at every stage of the construction lifecycle through core accountability, transparent communication, and engineering excellence rooted in integrity and ethics." },
@@ -165,14 +168,15 @@ export default function AboutPage() {
             <div className="section-label">Our People</div>
             <h2 className="section-title">Leadership <span className="blue">Team</span></h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="leadteam" >
+            {/* style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }} */}
             {[
-              { name: "Mr. Rajesh Arora", role: "Principal Consultant & CEO", image: "/assets/rajesh.jpg",  exp: "32 years", spec: "Project & Programme Management", bio: "Civil Engineering graduate with over three decades of experience managing landmark construction projects across South India. Founded Infinity Art PMC to bring world-class PMC standards to Indian developers." },
+              { name: "Mr. Rajesh Arora", role: "Principal Consultant & CEO", image: "/assets/rajesh.jpg", exp: "32 years", spec: "Project & Programme Management", bio: "Civil Engineering graduate with over three decades of experience managing landmark construction projects across South India. Founded Infinity Art PMC to bring world-class PMC standards to Indian developers." },
               { name: "Ms. Priya Nair", role: "Director – Quality & Risk", image: "/assets/priya.avif", exp: "22 years", spec: "Quality Assurance & Risk Management", bio: "A certified project management professional (PMP) with extensive experience establishing quality frameworks for large-scale commercial and institutional projects." },
-              { name: "Mr. Arun Shetty", role: "Head – Cost Management", image: "/assets/arun.jpg" ,exp: "18 years", spec: "Quantity Surveying & Contract Management", bio: "Chartered quantity surveyor with deep expertise in cost planning, value engineering, and contract administration across residential and commercial developments." },
+              { name: "Mr. Arun Shetty", role: "Head – Cost Management", image: "/assets/arun.jpg", exp: "18 years", spec: "Quantity Surveying & Contract Management", bio: "Chartered quantity surveyor with deep expertise in cost planning, value engineering, and contract administration across residential and commercial developments." },
             ].map(p => (
               <div key={p.name} className="card">
-                <img src={p.image} alt={p.name} style={{width: 64, height: 64, borderRadius: "50%", objectFit: "cover", marginBottom: 16}} />
+                <img src={p.image} alt={p.name} style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover", marginBottom: 16 }} />
                 <h3 style={{ fontSize: 16, fontWeight: 700, marginBottom: 4 }}>{p.name}</h3>
                 <div style={{ fontSize: 12, color: C.blue, fontWeight: 600, marginBottom: 4 }}>{p.role}</div>
                 <div style={{ fontSize: 11, color: C.muted, marginBottom: 14 }}>{p.exp} experience · {p.spec}</div>
@@ -190,12 +194,13 @@ export default function AboutPage() {
             <div className="section-label">How We Work</div>
             <h2 className="section-title">Our <span className="blue">Process</span></h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }}>
+          <div className="stlsection" >
+            {/* style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }} */}
             {[
-              ["01","Client Brief & Discovery","We deeply understand your objectives, budget, and timeline before any planning begins."],
-              ["02","Planning & Programming","Comprehensive budgeting, scheduling, and milestone planning aligned with design intent."],
-              ["03","Managed Execution","Stringent supervision, contractor coordination, quality checks, and stakeholder reporting."],
-              ["04","Commissioning & Handover","Final snag clearing, full documentation, certifications, and professional client handover."],
+              ["01", "Client Brief & Discovery", "We deeply understand your objectives, budget, and timeline before any planning begins."],
+              ["02", "Planning & Programming", "Comprehensive budgeting, scheduling, and milestone planning aligned with design intent."],
+              ["03", "Managed Execution", "Stringent supervision, contractor coordination, quality checks, and stakeholder reporting."],
+              ["04", "Commissioning & Handover", "Final snag clearing, full documentation, certifications, and professional client handover."],
             ].map(([n, t, d]) => (
               <div key={n} style={{ padding: "32px 24px", borderTop: `4px solid ${n === "01" ? C.blue : C.gray100}` }}>
                 <div style={{ fontSize: 44, fontWeight: 800, color: C.gray100, lineHeight: 1, marginBottom: 14 }}>{n}</div>
@@ -214,7 +219,8 @@ export default function AboutPage() {
             <div className="section-label">What Clients Say</div>
             <h2 className="section-title">Trusted by <span className="blue">Industry Leaders</span></h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
+          <div className="trustedclint" >
+            {/* style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }} */}
             {TESTIMONIALS.map(t => (
               <div key={t.name} className="card">
                 <div style={{ fontSize: 40, color: C.gray200, lineHeight: 0.8, marginBottom: 14 }}>"</div>

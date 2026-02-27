@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { C, SERVICES } from "../../lib/data";
+import "../../styles/service.modal.css"
 
 export const metadata = { title: "Services | Infinity Art PMC" };
 
@@ -25,7 +26,12 @@ export default function ServicesPage() {
       <section className="section">
         <div className="container">
           {SERVICES.map((s, i) => (
-            <div key={s.slug} id={s.slug} style={{ display: "grid", gridTemplateColumns: i % 2 === 0 ? "1fr 1.3fr" : "1.3fr 1fr", gap: 64, alignItems: "center", marginBottom: 96, paddingBottom: 96, borderBottom: i < SERVICES.length - 1 ? `1px solid ${C.border}` : "none" }}>
+            // <div className="srvies" key={s.slug} id={s.slug}  style={{ display: "grid", gridTemplateColumns: i % 2 === 0 ? "1fr 1.3fr" : "1.3fr 1fr", gap: 64, alignItems: "center", marginBottom: 96, paddingBottom: 96, borderBottom: i < SERVICES.length - 1 ? `1px solid ${C.border}` : "none" }}>
+            <div
+  className={`srvies ${i % 2 === 0 ? "even" : "odd"}`}
+  key={s.slug}
+  id={s.slug}
+>
               {i % 2 !== 0 && (
                 <div>
                   <div className="section-label">{`0${i + 1}`}</div>
@@ -94,6 +100,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      
+
       {/* Why choose us */}
       <section className="section-alt">
         <div className="container">
@@ -101,7 +109,8 @@ export default function ServicesPage() {
             <div className="section-label">Why Choose Us</div>
             <h2 className="section-title">The Infinity Art PMC <span className="blue">Advantage</span></h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
+          <div className="choosestyl" >
+            {/* style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }} */}
             {[
               ["🏆", "Proven Track Record", "80+ projects delivered across sectors with consistently high client satisfaction scores."],
               ["🔬", "Data-Driven Decisions", "We leverage real-time project data and analytics to make informed decisions at every stage."],

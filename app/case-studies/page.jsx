@@ -3,6 +3,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { C, CASE_STUDIES } from "../../lib/data";
 import CaseStudies from "../../components/CaseStudies";
+import "../../styles/casestudies.modal.css"
+import { methodlogystep}  from "../../lib/methodlogy";
 
 export default function CaseStudiesPage() {
   const [active, setActive] = useState(0);
@@ -22,11 +24,10 @@ export default function CaseStudiesPage() {
       </div>
       <CaseStudies/>
 
-      {/* Overview cards */}
       
 
       {/* Process */}
-      <section className="section-alt">
+      {/* <section className="section-alt">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div className="section-label">Our Methodology</div>
@@ -42,6 +43,26 @@ export default function CaseStudiesPage() {
             ))}
           </div>
         </div>
+      </section> */}
+      <section className="methodlogy-section">
+        <div className="methodlogy-container">
+          <div className="methodology-header">
+<div className="methodlogy-label">Our Methodology</div>
+<h2 className="methodology-title">
+How We Achieve <span className="methodology-heighlight">Results</span>
+</h2>
+          </div>
+      <div className="methodology-grid">
+     {methodlogystep.map((step, index) => (
+      <div key={index} className="methodology-card">
+        <div className="methodology-icon">{step.icon}</div>
+        <h3 className="methodology-step-title">{step.title}</h3>
+        <p className="methodology-description">{step.description}</p>
+        </div>
+     ))}
+      </div>
+        </div>
+
       </section>
 
       {/* CTA */}

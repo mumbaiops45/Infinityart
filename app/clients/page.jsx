@@ -1,10 +1,9 @@
 
-
-
-
 import Link from "next/link";
 import { C, CLIENTS, TESTIMONIALS, STATS } from "../../lib/data";
 import Feedback from "../../components/Feedback";
+import "../../styles/client.modal.css"
+import {features}  from "../../lib/clientsay"
 
 
 export const metadata = { title: "Clients | Infinity Art PMC" };
@@ -27,7 +26,8 @@ export default function ClientsPage() {
       {/* Stats */}
       <section style={{ background: C.blue, padding: "56px 32px" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 32 }}>
+          <div className="statusname">
+            {/* style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 32 }} */}
             {STATS.map(s => (
               <div key={s.label} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: 40, fontWeight: 700, color: "#fff" }}>{s.value}</div>
@@ -40,75 +40,55 @@ export default function ClientsPage() {
 
       {/* Client logos */}
       <section className="section">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <div className="section-label">Our Partners</div>
-            <h2 className="section-title">Clients Who <span className="blue">Trust Us</span></h2>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 20, marginBottom: 16 }}>
-            {CLIENTS.map((c) => (
-              <div key={c} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 10, padding: "24px 20px", display: "flex", alignItems: "center", gap: 14, boxShadow: "0 2px 8px rgba(30,77,140,0.05)" }}>
-                <div style={{ width: 46, height: 46, borderRadius: "50%", background: `linear-gradient(135deg,${C.blue},${C.steelLight})`, color: "#fff", fontSize: 18, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{c[0]}</div>
-                <div style={{ fontSize: 13, fontWeight: 600, color: C.text, lineHeight: 1.3 }}>{c}</div>
-              </div>
-            ))}
-          </div>
+      <div className="container">
+        <div className="section-header">
+          <div className="section-label">Our Partners</div>
+          <h2 className="section-title">
+            Clients Who <span className="blue">Trust Us</span>
+          </h2>
         </div>
-      </section>
-      
+        
+        <div className="client-grid">
+          {CLIENTS.map((client, index) => (
+            <div 
+              key={client} 
+              className="client-card"
+              style={{ '--card-index': index }} // For animation delay
+            >
+              <div className="client-avatar">{client[0]}</div>
+              <div className="client-name">{client}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
       <Feedback/>
-     
-
-      {/* Testimonials */}
-      {/* <section className="section-alt">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <div className="section-label">What Clients Say</div>
-            <h2 className="section-title">Client <span className="blue">Testimonials</span></h2>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
-            {TESTIMONIALS.map(t => (
-              <div key={t.name} className="card">
-                <div style={{ display: "flex", marginBottom: 14 }}>
-                  {[1,2,3,4,5].map(s => <span key={s} style={{ color: "#f59e0b", fontSize: 14 }}>★</span>)}
-                </div>
-                <div style={{ fontSize: 40, color: C.gray200, lineHeight: 0.8, marginBottom: 14 }}>"</div>
-                <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.75, marginBottom: 20 }}>{t.text}</p>
-                <div style={{ display: "flex", alignItems: "center", gap: 12, paddingTop: 16, borderTop: `1px solid ${C.border}` }}>
-                  <div style={{ width: 40, height: 40, borderRadius: "50%", background: `linear-gradient(135deg,${C.blue},${C.steel})`, color: "#fff", fontSize: 16, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{t.name[0]}</div>
-                  <div><div style={{ fontSize: 13, fontWeight: 700 }}>{t.name}</div><div style={{ fontSize: 11, color: C.muted }}>{t.role}</div></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* Why clients choose us */}
-      <section className="section">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <div className="section-label">Why Choose Us</div>
-            <h2 className="section-title">What Sets Us <span className="blue">Apart</span></h2>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-            {[
-              ["🎯","Single Point Accountability","One dedicated PMC team. One point of contact. Full ownership from day one."],
-              ["📊","Real-Time Transparency","Live dashboards and weekly reports mean you always know your project's exact status."],
-              ["⚡","Speed Without Compromise","We move fast — but never at the expense of quality. Our track record proves it."],
-              ["🤝","Long-Term Partnerships","Over 70% of our projects come from repeat clients. Relationships are everything to us."],
-            ].map(([ic, t, d]) => (
-              <div key={t} className="card" style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
-                <div style={{ width: 52, height: 52, borderRadius: 12, background: C.bluePale, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, flexShrink: 0 }}>{ic}</div>
-                <div>
-                  <h3 style={{ fontSize: 15, fontWeight: 700, marginBottom: 8 }}>{t}</h3>
-                  <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.7 }}>{d}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <section className="whychoose-section">
+      <div className="whychoose-container">
+        <div className="whychoose-header">
+          <div className="whychoose-label">Why Choose Us</div>
+          <h2 className="whychoose-title">
+            What Sets Us <span className="whychoose-highlight">Apart</span>
+          </h2>
         </div>
-      </section>
+        
+        <div className="whychoose-grid">
+          {features.map((feature, index) => (
+            <div key={index} className="whychoose-card">
+              <div className="whychoose-icon-wrapper">
+                <span className="whychoose-icon">{feature.icon}</span>
+              </div>
+              <div className="whychoose-content">
+                <h3 className="whychoose-card-title">{feature.title}</h3>
+                <p className="whychoose-description">{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+      
 
       {/* CTA */}
       <section style={{ background: C.blue, padding: "72px 32px", textAlign: "center" }}>

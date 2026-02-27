@@ -8,6 +8,7 @@ import Feedback from "../components/Feedback";
 import Start from "../components/Start";
 import CaseStudies from "../components/CaseStudies";
 import Portfolio from "../components/Portfolio";
+import "../styles/servicehome.modal.css"
 
 
 const images = [
@@ -113,17 +114,6 @@ const projects = [
     status: "Ongoing",
     image: "/assets/htrain.webp",
   },
-];
-
-
-const filters = [
-  "All",
-  "Residential",
-  "Commercial",
-  "Institutional",
-  "Township",
-  "Railways"
-
 ];
 
 
@@ -250,7 +240,7 @@ export default function HomePage() {
           />
         ))}
 
-        {/* Overlay */}
+        
         <div
           style={{
             position: "absolute",
@@ -259,7 +249,7 @@ export default function HomePage() {
           }}
         ></div>
 
-        {/* Content Container */}
+    
         <div
           style={{
             position: "relative",
@@ -273,8 +263,10 @@ export default function HomePage() {
             color: "#fff",
           }}
         >
-          {/* Left Section */}
-          <div style={{ width: "50%" }}>
+         
+          <div style={{
+            width: window.innerWidth <= 768 ? "100%" : "50%",
+          }}>
             <h1
               style={{
                 fontSize: "56px",
@@ -295,7 +287,7 @@ export default function HomePage() {
               from concept to commissioning.
             </p>
 
-            {/* Buttons */}
+           
             <div style={{ display: "flex", gap: "16px", marginTop: "24px" }}>
               <button
                 style={{
@@ -326,7 +318,7 @@ export default function HomePage() {
               </button>
             </div>
 
-            {/* Features */}
+          
             <ul
               style={{
                 display: "flex",
@@ -343,7 +335,7 @@ export default function HomePage() {
             </ul>
           </div>
 
-          {/* Right Section */}
+
           <div
             style={{
               width: "50%",
@@ -351,21 +343,21 @@ export default function HomePage() {
               justifyContent: "flex-end",
             }}
           >
-            <div
-              style={{
-                backgroundColor: "#fff",
-                padding: "16px",
-                borderRadius: "12px",
-                boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
-                marginTop: "78px",
-                width: "380px",
-                height: "340px",
-                display: "flex",
-                flexDirection: "column",
-                fontFamily: "sans-serif",
-              }}
+            <div className="performcard"
+              // style={{
+              //   backgroundColor: "#fff",
+              //   padding: "16px",
+              //   borderRadius: "12px",
+              //   boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
+              //   marginTop: "78px",
+              //   width: "380px",
+              //   height: "340px",
+              //   display: "flex",
+              //   flexDirection: "column",
+              //   fontFamily: "sans-serif",
+              // }}
             >
-              <div>
+              <div >
                 <p
                   style={{
                     textAlign: "center",
@@ -378,7 +370,7 @@ export default function HomePage() {
                   PERFORMANCE OVERVIEW
                 </p>
 
-                {/* Progress Item */}
+                
                 {[
                   { label: "On-Time Delivery Rate", value: 98 },
                   { label: "Client Satisfaction", value: 99 },
@@ -419,10 +411,10 @@ export default function HomePage() {
                 ))}
               </div>
 
-              {/* Bottom Stats */}
+              
               <div>
                 <hr style={{ border: "1px solid #ddd", marginBottom: "8px" }} />
-                
+
                 <div
                   style={{
                     marginTop: "15px",
@@ -430,7 +422,7 @@ export default function HomePage() {
                     fontSize: "12px",
                     textAlign: "center",
                     color: "#333",
-                     alignItems: "flex-start",
+                    alignItems: "flex-start",
                   }}
                 >
                   {[
@@ -443,12 +435,12 @@ export default function HomePage() {
                     <div
                       key={i}
                       style={{
-                        flex: 1,                
-                        display: "flex",        
+                        flex: 1,
+                        display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
                         alignItems: "center",
-                        padding: "0 8px",      
+                        padding: "0 8px",
                       }}
                     >
                       <p style={{ fontWeight: "bold", fontSize: "14px", margin: 0 }}>
@@ -465,6 +457,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      
 
       <div
         style={{
@@ -474,7 +467,7 @@ export default function HomePage() {
           overflow: "hidden",
         }}
       >
-        {/* Background Blur Circles */}
+
         <div
           style={{
             position: "absolute",
@@ -525,11 +518,11 @@ export default function HomePage() {
         <div
           style={{
             display: "flex",
-            flexDirection: "row", // <-- changed from column to row
+            flexDirection: "row",
             gap: "48px",
             position: "relative",
             zIndex: 10,
-            flexWrap: "wrap", // makes it responsive
+            flexWrap: "wrap",
           }}
         >
           {/* Text Section */}
@@ -539,7 +532,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             style={{
-              flex: "1 1 400px", // grow, shrink, basis for responsiveness
+              flex: "1 1 400px",
               color: "#374151",
               lineHeight: "1.7",
             }}
@@ -571,7 +564,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
             style={{
-              flex: "1 1 400px", // grow, shrink, basis for responsiveness
+              flex: "1 1 400px",
             }}
           >
             <img
@@ -604,13 +597,13 @@ export default function HomePage() {
         <div
           style={{
             display: "flex",
-            flexDirection: "row", // <-- changed to row
+            flexDirection: "row",
             gap: "48px",
             alignItems: "flex-start",
-            flexWrap: "wrap", // makes it responsive
+            flexWrap: "wrap",
           }}
         >
-          {/* Image Section */}
+
           <div
             style={{
               flex: "1 1 400px",
@@ -839,17 +832,17 @@ export default function HomePage() {
         />
 
         {/* Main content grid */}
-        <div
-          style={{
-            maxWidth: "1280px",
-            margin: "0 auto",
-            width: "100%",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr", // two-column layout
-            gap: "80px",
-            padding: "80px 24px",
-            alignItems: "center", // vertical center for both columns
-          }}
+        <div className="servicehome"
+        // style={{
+        //   maxWidth: "1280px",
+        //   margin: "0 auto",
+        //   width: "100%",
+        //   display: "grid",
+        //   gridTemplateColumns: "1fr 1fr",
+        //   gap: "80px",
+        //   padding: "80px 24px",
+        //   alignItems: "center", 
+        // }}
         >
           {/* List of services */}
           <div>

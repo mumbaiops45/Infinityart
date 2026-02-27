@@ -1,0 +1,49 @@
+.performcard {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-top: 78px;
+    width: 380px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+
+.servicehome {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 80px 24px;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1024px) {
+    .servicehome {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .performcard {
+        height: 352px;
+        width: 353px;
+        position: relative;
+        left: -139px;
+        top: -1pc;
+    }
+}
+
+@media (max-width: 600px) {
+    .servicehome {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+
+}

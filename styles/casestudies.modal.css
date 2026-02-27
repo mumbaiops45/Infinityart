@@ -1,0 +1,446 @@
+/* MethodologySection.css - Unique class names for Methodology section */
+/* Large screen styles preserved exactly as original */
+
+/* Main Section */
+.methodology-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Elements */
+.methodology-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(30, 77, 140, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.methodology-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(74, 125, 181, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Container */
+.methodology-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Styles - Exactly as original */
+.methodology-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.methodology-label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1E4D8C;
+  background: rgba(30, 77, 140, 0.1);
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.methodology-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1f2a41;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.methodology-highlight {
+  color: #1E4D8C;
+  position: relative;
+  display: inline-block;
+}
+
+.methodology-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #1E4D8C, #4A7DB5);
+  border-radius: 3px;
+}
+
+/* Grid Layout - Exactly as original (4 columns on large screen) */
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+/* Card Styles - Exactly as original */
+.methodology-card {
+  background: #ffffff;
+  border: 1px solid #e0e7ef;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 12px rgba(30, 77, 140, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle hover effect - preserves card visibility */
+.methodology-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(30, 77, 140, 0.15);
+  border-color: #1E4D8C;
+}
+
+.methodology-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: linear-gradient(to bottom, #1E4D8C, #4A7DB5);
+  transition: height 0.3s ease;
+}
+
+.methodology-card:hover::before {
+  height: 100%;
+}
+
+/* Icon Styles - Exactly as original */
+.methodology-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.methodology-card:hover .methodology-icon {
+  transform: scale(1.1);
+}
+
+/* Title Styles - Exactly as original */
+.methodology-step-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1f2a41;
+  transition: color 0.3s ease;
+}
+
+.methodology-card:hover .methodology-step-title {
+  color: #1E4D8C;
+}
+
+/* Description Styles - Exactly as original */
+.methodology-description {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.methodology-card:hover .methodology-description {
+  color: #4b5563;
+}
+
+/* ===== RESPONSIVE STYLES - Added without affecting large screens ===== */
+
+/* Tablet Landscape (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .methodology-container {
+    padding: 0 24px;
+  }
+
+  .methodology-title {
+    font-size: 38px;
+  }
+
+  .methodology-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .methodology-card {
+    padding: 20px 16px;
+  }
+
+  .methodology-icon {
+    font-size: 26px;
+  }
+
+  .methodology-step-title {
+    font-size: 14px;
+  }
+
+  .methodology-description {
+    font-size: 12px;
+  }
+}
+
+/* Tablet Portrait (768px and below) */
+@media screen and (max-width: 768px) {
+  .methodology-section {
+    padding: 60px 0;
+  }
+
+  .methodology-title {
+    font-size: 32px;
+  }
+
+  .methodology-label {
+    font-size: 13px;
+    padding: 5px 14px;
+  }
+
+  .methodology-header {
+    margin-bottom: 40px;
+  }
+
+  .methodology-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .methodology-card {
+    padding: 20px 16px;
+  }
+
+  .methodology-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .methodology-step-title {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .methodology-description {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Large (480px and below) */
+@media screen and (max-width: 480px) {
+  .methodology-section {
+    padding: 50px 0;
+  }
+
+  .methodology-container {
+    padding: 0 20px;
+  }
+
+  .methodology-title {
+    font-size: 28px;
+  }
+
+  .methodology-label {
+    font-size: 12px;
+    padding: 4px 12px;
+    letter-spacing: 1px;
+  }
+
+  .methodology-header {
+    margin-bottom: 32px;
+  }
+
+  .methodology-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 0 auto;
+    /* max-width: 400px; */
+    padding: 25px 5%;
+
+  }
+
+  .methodology-card {
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .methodology-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .methodology-step-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .methodology-description {
+    font-size: 14px;
+  }
+
+  /* Remove left border effect on mobile */
+  .methodology-card::before {
+    width: 0;
+    height: 0;
+  }
+
+  /* Add bottom border effect instead for mobile */
+  .methodology-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1E4D8C, #4A7DB5);
+    transition: width 0.3s ease;
+  }
+
+  .methodology-card:hover::after {
+    width: 80%;
+  }
+}
+
+/* Mobile Small (360px and below) */
+@media screen and (max-width: 360px) {
+  .methodology-title {
+    font-size: 24px;
+  }
+
+  .methodology-card {
+    padding: 20px 16px;
+  }
+
+  .methodology-icon {
+    font-size: 28px;
+  }
+
+  .methodology-step-title {
+    font-size: 15px;
+  }
+
+  .methodology-description {
+    font-size: 13px;
+  }
+}
+
+/* Landscape Mode */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .methodology-section {
+    padding: 40px 0;
+  }
+
+  .methodology-grid {
+    gap: 12px;
+    margin-bottom: 60px;
+  }
+}
+
+/* Animation for cards */
+@keyframes methodology-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.methodology-card {
+  animation: methodology-fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.methodology-card:nth-child(1) { animation-delay: 0.1s; }
+.methodology-card:nth-child(2) { animation-delay: 0.2s; }
+.methodology-card:nth-child(3) { animation-delay: 0.3s; }
+.methodology-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .methodology-section {
+    background: linear-gradient(135deg, #1a1f2c 0%, #0f1420 100%);
+  }
+
+  .methodology-section::before,
+  .methodology-section::after {
+    opacity: 0.2;
+  }
+
+  .methodology-title {
+    color: #ffffff;
+  }
+
+  .methodology-label {
+    background: rgba(74, 125, 181, 0.15);
+    color: #8ab3ff;
+  }
+
+  .methodology-card {
+    background: #242937;
+    border-color: #2f3542;
+  }
+
+  .methodology-step-title {
+    color: #e5e7eb;
+  }
+
+  .methodology-description {
+    color: #9ca3af;
+  }
+
+  .methodology-card:hover {
+    border-color: #8ab3ff;
+  }
+
+  .methodology-card:hover .methodology-step-title {
+    color: #8ab3ff;
+  }
+
+  .methodology-card:hover .methodology-description {
+    color: #d1d5db;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .methodology-section {
+    background: none;
+    padding: 40px 0;
+  }
+
+  .methodology-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .methodology-section::before,
+  .methodology-section::after,
+  .methodology-card::before,
+  .methodology-card::after {
+    display: none;
+  }
+}

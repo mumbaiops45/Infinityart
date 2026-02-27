@@ -1,0 +1,67 @@
+/* srvies */
+
+/* Base service grid container */
+.srvies {
+    display: grid;
+    gap: 64px;
+    align-items: center;
+    margin-bottom: 96px;
+    padding-bottom: 96px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Remove border-bottom for the last item */
+.srvies:last-child {
+    border-bottom: none;
+}
+
+/* Alternating columns */
+.srvies.even {
+    grid-template-columns: 1fr 1.3fr;
+    /* image left, text right */
+}
+
+.srvies.odd {
+    grid-template-columns: 1.3fr 1fr;
+    /* text left, image right */
+}
+
+
+.choosestyl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    .srvies,
+    .srvies.even,
+    .srvies.odd {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .srvies {
+        display: grid;
+        gap: 64px;
+        align-items: center;
+        margin-bottom: 96px;
+        padding-bottom: 96px;
+        border-bottom: 1px solid rgb(220, 232, 245);
+    }
+
+    .choosestyl {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}

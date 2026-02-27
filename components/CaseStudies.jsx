@@ -108,8 +108,7 @@ const CaseStudies = () => {
 
     @media (min-width: 1024px) {
       .case-studies-section {
-        padding-left: 5rem;
-        padding-right: 5rem;
+       padding: 20px 32px 80px
       }
     }
 
