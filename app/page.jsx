@@ -240,7 +240,7 @@ export default function HomePage() {
           />
         ))}
 
-        
+
         <div
           style={{
             position: "absolute",
@@ -249,22 +249,22 @@ export default function HomePage() {
           }}
         ></div>
 
-    
+
         <div className="herostly"
-          // style={{
-          //   position: "relative",
-          //   zIndex: 10,
-          //   maxWidth: "1280px",
-          //   width: "100%",
-          //   // padding: "0 32px",
-          //   padding: '4rem 5rem',
-          //   display: "flex",
-          //   flexDirection: "row",
-          //   justifyContent: "space-between",
-          //   color: "#fff",
-          // }}
+        // style={{
+        //   position: "relative",
+        //   zIndex: 10,
+        //   maxWidth: "1280px",
+        //   width: "100%",
+        //   // padding: "0 32px",
+        //   padding: '4rem 5rem',
+        //   display: "flex",
+        //   flexDirection: "row",
+        //   justifyContent: "space-between",
+        //   color: "#fff",
+        // }}
         >
-         
+
           <div style={{
             width: window.innerWidth <= 768 ? "100%" : "50%",
           }}>
@@ -288,7 +288,7 @@ export default function HomePage() {
               from concept to commissioning.
             </p>
 
-           
+
             <div style={{ display: "flex", gap: "16px", marginTop: "24px" }}>
               <button
                 style={{
@@ -319,7 +319,7 @@ export default function HomePage() {
               </button>
             </div>
 
-          
+
             <ul
               style={{
                 display: "flex",
@@ -337,12 +337,12 @@ export default function HomePage() {
           </div>
 
 
-          <div
-            style={{
-              width: "50%",
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
+          <div className="hero-rigght"
+            // style={{
+            //   width: "50%",
+            //   display: "flex",
+            //   justifyContent: "flex-end",
+            // }}
           >
             <div className="performcard">
               <div >
@@ -358,7 +358,7 @@ export default function HomePage() {
                   PERFORMANCE OVERVIEW
                 </p>
 
-                
+
                 {[
                   { label: "On-Time Delivery Rate", value: 98 },
                   { label: "Client Satisfaction", value: 99 },
@@ -399,7 +399,7 @@ export default function HomePage() {
                 ))}
               </div>
 
-              
+
               <div>
                 <hr style={{ border: "1px solid #ddd", marginBottom: "8px" }} />
 
@@ -445,17 +445,9 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      
 
-      <div className="somechange"
-        // style={{
-        //   position: "relative",
-        //   background: "linear-gradient(to right, #f9fafb, #ffffff, #f9fafb)",
-        //   // padding: "80px 32px",
-        //   padding: '4rem 5rem',
-        //   overflow: "hidden",
-        // }}
-      >
+
+      <div className="somechange">
 
         <div
           style={{
@@ -577,11 +569,11 @@ export default function HomePage() {
       {/* ── SERVICES ── */}
 
       <div className="stylesome"
-        // style={{
-        //   maxWidth: "1200px",
-        //   margin: "0 auto",
-        //   padding: "4rem 5rem"
-        // }}
+      // style={{
+      //   maxWidth: "1200px",
+      //   margin: "0 auto",
+      //   padding: "4rem 5rem"
+      // }}
       >
         <div
           style={{
@@ -839,7 +831,7 @@ export default function HomePage() {
               style={{
                 textTransform: "uppercase",
                 letterSpacing: "3px",
-                    fontSize: "1.5rem",
+                fontSize: "1.5rem",
                 marginBottom: "24px",
                 fontWeight: "700",
                 color: "var(--primery)",

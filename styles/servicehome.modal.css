@@ -1,14 +1,23 @@
+.hero-rigght {
+    display: flex;
+    justify-content: flex-end;  
+    width: 50%;                
+}
+
+
+
+
+
 .performcard {
-    background-color: #fff;
-    padding: 16px;
+    width: 100%;
+    max-width: 100%;       
+    height: auto;
+    padding: 20px;
+    margin: 30px auto 0 auto; 
+    box-sizing: border-box;    
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    margin-top: 78px;
-    width: 380px;
-    height: 340px;
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
+    background-color: #fff;
 }
 
 .herostly {
@@ -61,7 +70,24 @@
     }
 }
 
+
+@media (min-width: 601px) and (max-width: 1600px) {
+    .hero-right {
+        width: 23%;          
+        justify-content: flex-end;  
+    }
+
+    .performcard {
+        position: relative;
+        top: 60px;
+        height: 390px;        
+        max-width: 70%;
+    }
+}
+
+
 @media (max-width: 600px) {
+
     .servicehome {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -79,15 +105,37 @@
         padding: 20px 5%;
         overflow: hidden;
     }
-    .herostly {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    padding: 20px 4%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: #fff;
-}
+    .hero-rigght {
+        width: 100%;            /* Full width on mobile */
+        justify-content: center; /* Center card */
+        margin-top: 30px;
+    }
 
+    /* ✅ HERO FIX */
+    .herostly {
+        flex-direction: column;   /* 👈 Yahi main fix hai */
+        padding: 20px 4%;
+    }
+
+    /* Left content full width */
+    .herostly > div:first-child {
+        width: 100%;
+    }
+
+    /* Card section full width */
+    .herostly > div:last-child {
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    
+    .performcard {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin-top: 30px;
+        left: 0;
+        top: 0;
+    }
 }
