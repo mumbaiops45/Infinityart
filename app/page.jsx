@@ -250,28 +250,15 @@ export default function HomePage() {
         ></div>
 
 
-        <div className="herostly"
-        // style={{
-        //   position: "relative",
-        //   zIndex: 10,
-        //   maxWidth: "1280px",
-        //   width: "100%",
-        //   // padding: "0 32px",
-        //   padding: '4rem 5rem',
-        //   display: "flex",
-        //   flexDirection: "row",
-        //   justifyContent: "space-between",
-        //   color: "#fff",
-        // }}
-        >
+        <div className="herostly">
 
           <div style={{
             width: window.innerWidth <= 768 ? "100%" : "50%",
           }}>
             <h1
               style={{
-                fontSize: "56px",
-                fontWeight: "bold",
+                fontSize: "42px",
+                fontWeight: "700",
                 marginTop: "78px",
                 lineHeight: "1.2",
               }}
