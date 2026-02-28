@@ -182,9 +182,9 @@ div[style*="position: relative"][style*="height: 100vh"] {
 
     /* Hero Buttons Mobile */
     .herostly div[style*="display: flex"][style*="gap: 16px"] {
-        flex-direction: column !important;
+        /* flex-direction: column !important; */
         gap: 12px !important;
-        max-width: 280px !important;
+        /* max-width: 280px !important; */
         margin: 20px auto 0 !important;
     }
 
@@ -196,7 +196,7 @@ div[style*="position: relative"][style*="height: 100vh"] {
 
     /* Hero Features List Mobile */
     .herostly ul {
-        flex-direction: column !important;
+        /* flex-direction: column ; */
         gap: 10px !important;
         align-items: center !important;
         justify-content: center !important;
