@@ -116,15 +116,12 @@ export default function AboutPage() {
        <h1 className="engineering-main-heading">Our Expertise & Commitments</h1>
 
       <section className="engineering-section">
-        {/* <h1 className="engineering-main-heading">Our Expertise & Commitments</h1> */}
-       
-
         <div className="engineering-card">
           <img className="engineering-image" src="/assets/excellence.jpg" alt="Management Excellence" />
           <div className="engineering-text-container">
             <h2 className="engineering-title">Management Excellence</h2>
             <p className="engineering-text">
-              We have delivered change management across varied works including Costing, Project Management, Contracts Management, IPC Billing and QS services. Core strength lies in Management, executed with utmost care and responsibility.
+            We have delivered change management varied works Costing, Project Management, Contracts Management, IPC Billing and QS services, core strength in Management, wherein performed with utmost care and responsibility.
             </p>
           </div>
         </div>
@@ -134,17 +131,17 @@ export default function AboutPage() {
           <div className="engineering-text-container">
             <h2 className="engineering-title">High-End Infrastructure Expertise</h2>
             <p className="engineering-text">
-              Proficient in High-speed Rail, elevated viaducts, River Bridges, Rail Crossings, Highway Crossings, Metro Tunnel Structures, TVS systems, Interface services, ELV Controls, Rolling Stocks, Tracks, S&T systems, Installation, Testing, Commissioning, and handing over to clients.
+             	Working in vast infrastructure sectors, our team is suitable to resolve project conflicts. Complete the Project without disruptions and delays. If any delays occurred shall be taken care under FIDIC by laws and Indian Construction Law.
             </p>
           </div>
         </div>
 
         <div className="engineering-card">
-          <img className="engineering-image" src="/assets/projectDelivery.avif" alt="Project Delivery" />
+          <img className="engineering-image" src="/assets/metrostation.png" alt="Project Delivery" />
           <div className="engineering-text-container">
-            <h2 className="engineering-title">Seamless Project Delivery</h2>
+            <h2 className="engineering-title"> Highspeed Rail</h2>
             <p className="engineering-text">
-              Our team ensures resolution of project conflicts across vast infrastructure sectors. Projects are completed without disruptions and delays, with adherence to FIDIC and Indian Construction Law in case of any delays.
+              	Proficient in Highspeed Rail, elevated via ducts, River Bridges, Rail Crossings, Heighway Crossings, Metro Tunnels Structure, TVS systems, Interface services ELV Controls, Rolling Stocks, Tracks, S&T systems, installation Testing and commissioning and handing over to the Clients.
             </p>
           </div>
         </div>
@@ -154,7 +151,7 @@ export default function AboutPage() {
           <div className="engineering-text-container">
             <h2 className="engineering-title">Execution & Claims Management</h2>
             <p className="engineering-text">
-              Core competencies include Project Execution & Management, Bid process, and Claims. Extensive experience in correspondence for various infrastructure structures and mixed-use projects, including EOT delay analysis.
+              The Core competencies are Project Execution & Management, Bid process; Claims. Extensive correspondences of various Ifra structures, mixed-use Projects, EOT delay analysis.
             </p>
           </div>
         </div>
@@ -164,7 +161,7 @@ export default function AboutPage() {
           <div className="engineering-text-container">
             <h2 className="engineering-title">Dispute & Arbitration Support</h2>
             <p className="engineering-text">
-              Expertise in Commercial Litigation and Dispute Adjudication Process deliverables, defending cases in accordance with DAB / Arbitrators panels.
+              	Commercial Litigation and Dispute Adjudication Process deliverables as required to defend the case in accordance by the DAB / Arbitrators panels.
             </p>
           </div>
         </div>
