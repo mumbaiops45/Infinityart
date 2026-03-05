@@ -36,8 +36,10 @@ const services = [
   },
   {
     title: "Contract Management",
+    // description:
+    //   "Professional contract handling, tendering, and procurement with complete transparency.",
     description:
-      "Professional contract handling, tendering, and procurement with complete transparency.",
+    "Commercial Litigation and Dispute Adjudication Process deliverables as required to defend the case in accordance by the DAB / Arbitrators panels."
   },
   {
     title: "Dispute Adjudication Proceedings",

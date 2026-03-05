@@ -23,15 +23,7 @@ export default function AboutPage() {
       </div>
       <section className="section">
         <div className="container">
-          <div className="abutstly"
-            // style={{
-            //   display: "grid",
-            //   gridTemplateColumns: "1fr 1.2fr",
-            //   gap: 72,
-            //   alignItems: "center",
-            // }}
-          >
-
+          <div className="abutstly">
             <div
               style={{
                 borderRadius: 14,
@@ -121,11 +113,67 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats */}
+       <h1 className="engineering-main-heading">Our Expertise & Commitments</h1>
+
+      <section className="engineering-section">
+        {/* <h1 className="engineering-main-heading">Our Expertise & Commitments</h1> */}
+       
+
+        <div className="engineering-card">
+          <img className="engineering-image" src="/assets/excellence.jpg" alt="Management Excellence" />
+          <div className="engineering-text-container">
+            <h2 className="engineering-title">Management Excellence</h2>
+            <p className="engineering-text">
+              We have delivered change management across varied works including Costing, Project Management, Contracts Management, IPC Billing and QS services. Core strength lies in Management, executed with utmost care and responsibility.
+            </p>
+          </div>
+        </div>
+
+        <div className="engineering-card">
+          <img className="engineering-image" src="/assets/infrastructure.webp" alt="Infrastructure Expertise" />
+          <div className="engineering-text-container">
+            <h2 className="engineering-title">High-End Infrastructure Expertise</h2>
+            <p className="engineering-text">
+              Proficient in High-speed Rail, elevated viaducts, River Bridges, Rail Crossings, Highway Crossings, Metro Tunnel Structures, TVS systems, Interface services, ELV Controls, Rolling Stocks, Tracks, S&T systems, Installation, Testing, Commissioning, and handing over to clients.
+            </p>
+          </div>
+        </div>
+
+        <div className="engineering-card">
+          <img className="engineering-image" src="/assets/projectDelivery.avif" alt="Project Delivery" />
+          <div className="engineering-text-container">
+            <h2 className="engineering-title">Seamless Project Delivery</h2>
+            <p className="engineering-text">
+              Our team ensures resolution of project conflicts across vast infrastructure sectors. Projects are completed without disruptions and delays, with adherence to FIDIC and Indian Construction Law in case of any delays.
+            </p>
+          </div>
+        </div>
+
+        <div className="engineering-card">
+          <img className="engineering-image" src="/assets/managementclaim.jpg" alt="Execution & Claims Management" />
+          <div className="engineering-text-container">
+            <h2 className="engineering-title">Execution & Claims Management</h2>
+            <p className="engineering-text">
+              Core competencies include Project Execution & Management, Bid process, and Claims. Extensive experience in correspondence for various infrastructure structures and mixed-use projects, including EOT delay analysis.
+            </p>
+          </div>
+        </div>
+
+        <div className="engineering-card">
+          <img className="engineering-image" src="/assets/arbitrationSupport.jpg" alt="Dispute & Arbitration Support" />
+          <div className="engineering-text-container">
+            <h2 className="engineering-title">Dispute & Arbitration Support</h2>
+            <p className="engineering-text">
+              Expertise in Commercial Litigation and Dispute Adjudication Process deliverables, defending cases in accordance with DAB / Arbitrators panels.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
       <section style={{ background: C.blue, padding: "64px 32px" }}>
         <div className="container">
           <div className="aboutfeedback">
-            {/* style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 32 }} */}
             {STATS.map(s => (
               <div key={s.label} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: 44, fontWeight: 700, color: "#fff" }}>{s.value}</div>
@@ -136,7 +184,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Vision & Mission */}
       <section className="section-alt">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -144,7 +191,6 @@ export default function AboutPage() {
             <h2 className="section-title">Vision & <span className="blue">Mission</span></h2>
           </div>
           <div className="gridstyl" >
-            {/* style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }} */}
             {[
               { icon: "🎯", title: "Our Vision", text: "To be the most trusted and respected project management consultancy in India — the partner every developer turns to when quality, reliability, and accountability are non-negotiable." },
               { icon: "🤝", title: "Our Mission", text: "To deliver measurable value at every stage of the construction lifecycle through core accountability, transparent communication, and engineering excellence rooted in integrity and ethics." },
@@ -161,7 +207,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership */}
+
       <section className="section">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -169,7 +215,7 @@ export default function AboutPage() {
             <h2 className="section-title">Leadership <span className="blue">Team</span></h2>
           </div>
           <div className="leadteam" >
-            {/* style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }} */}
+
             {[
               { name: "Mr. Rajesh Arora", role: "Principal Consultant & CEO", image: "/assets/rajesh.jpg", exp: "32 years", spec: "Project & Programme Management", bio: "Civil Engineering graduate with over three decades of experience managing landmark construction projects across South India. Founded Infinity Art PMC to bring world-class PMC standards to Indian developers." },
               { name: "Ms. Priya Nair", role: "Director – Quality & Risk", image: "/assets/priya.avif", exp: "22 years", spec: "Quality Assurance & Risk Management", bio: "A certified project management professional (PMP) with extensive experience establishing quality frameworks for large-scale commercial and institutional projects." },
@@ -187,7 +233,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Process */}
+
       <section className="section-alt">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -195,7 +241,7 @@ export default function AboutPage() {
             <h2 className="section-title">Our <span className="blue">Process</span></h2>
           </div>
           <div className="stlsection" >
-            {/* style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }} */}
+
             {[
               ["01", "Client Brief & Discovery", "We deeply understand your objectives, budget, and timeline before any planning begins."],
               ["02", "Planning & Programming", "Comprehensive budgeting, scheduling, and milestone planning aligned with design intent."],
@@ -220,7 +266,7 @@ export default function AboutPage() {
             <h2 className="section-title">Trusted by <span className="blue">Industry Leaders</span></h2>
           </div>
           <div className="trustedclint" >
-            {/* style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }} */}
+
             {TESTIMONIALS.map(t => (
               <div key={t.name} className="card">
                 <div style={{ fontSize: 40, color: C.gray200, lineHeight: 0.8, marginBottom: 14 }}>"</div>

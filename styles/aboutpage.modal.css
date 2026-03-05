@@ -98,3 +98,99 @@
     gap: 16px 
 }
 }
+
+
+/* Center main heading */
+.engineering-main-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+/* Base section layout */
+.engineering-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Card styling */
+.engineering-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.engineering-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Image styling */
+.engineering-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.engineering-card:hover .engineering-image {
+  filter: blur(3px);
+  transform: scale(1.05);
+}
+
+/* Text container */
+.engineering-text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+/* Only show paragraph on hover */
+.engineering-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.engineering-card:hover .engineering-text {
+  opacity: 1;
+  max-height: 300px; /* enough to show full paragraph */
+}
+
+/* Subheading at bottom (always visible) */
+.engineering-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .engineering-section {
+    grid-template-columns: 1fr;
+  }
+  .engineering-card {
+    height: 300px;
+  }
+}
