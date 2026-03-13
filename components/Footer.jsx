@@ -53,9 +53,9 @@ export default function Footer() {
           <div>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: C.steelLight, marginBottom: 16 }}>Contact Us</div>
             {[
-              ["📍", "Bengaluru, Karnataka, India – 560 001"],
-              ["📞", "+91 98XXX XXXXX"],
-              ["✉️", "info@infinityartpmc.in"],
+              ["📍", "A1203 Riddhi Siddhi Sec.3 New Panvel, Navi Mumbai, India – 410206"],
+              ["📞", "+9769465042 , +91 9082697924"],
+              ["✉️", "gurunalat@gmail.com"],
               ["🕐", "Mon – Sat: 9:00 AM – 6:00 PM"],
             ].map(([ic, val]) => (
               <div key={val} style={{ display: "flex", gap: 8, marginBottom: 12, alignItems: "flex-start" }}>
